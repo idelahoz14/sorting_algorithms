@@ -1,42 +1,43 @@
 #include "sort.h"
+#include "sort.h"
 
 /**
-* swap - swap the value of 2 variables
-* @x: value
-* @y: value
-*/
+ * swap - Swap the value of two variables
+ *
+ * @x: Integer
+ * @y: Intger
+ **/
 void swap(int *x, int *y)
 {
-	int temp = 0;
+	int temp;
 
-	temp = *a;
-	*a = *b;
-	*b = temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
 
 /**
-* bubble_sort - organize the messy array
-* @array: array messy
-* @size: size of the array
-*
-* Return: 0
-*/
+ * bubble_sort - Compare consecutive items
+ * @array: unsorted array
+ * @size: size of the array
+ *
+ * Return: nothing
+ *
+ */
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j;
 
 	if (!array || size < 2)
-	{
 		return;
-	}
 
 	for (i = 0; i < size - 1; i++)
 	{
-		for (j = 0; j < size - 1 - i; j++)
+		for (j = 0; j < size - i - 1; j++)
 		{
 			if (array[j] > array[j + 1])
 			{
-				swap(&array[j] > &array[j + 1]);
+				swap(&array[j], &array[j + 1]);
 				print_array(array, size);
 			}
 		}
