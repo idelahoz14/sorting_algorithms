@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * selection_sort -
+ * selection_sort - selection sort method
  *
  * @array: sorted array
  * @size: size of the array
